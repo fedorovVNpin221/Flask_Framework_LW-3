@@ -20,32 +20,5 @@
         <button type="button" onclick="calculate()">Рассчитать</button>
     </form>
     <p id="result"></p>
-
-    <script>
-        function calculate()
-        {
-            let a = Number(document.getElementById("a").value);
-            let b = Number(document.getElementById("b").value);
-            let c = Number(document.getElementById("c").value);
-
-            let discriminant = Math.pow(b, 2) - 4 * a * c;
-
-            if (discriminant > 0)
-            {
-                let x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-                let x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-                document.getElementById("result").innerHTML = "Корни уравнения: x<sub>1</sub> = " + x1 + ", x<sub>2</sub> = " + x2;
-            }
-            else if (discriminant == 0)
-            {
-                let x = -b / (2 * a);
-                document.getElementById("result").innerHTML = "Уравнение имеет единственный корень: x = " + x;
-            }
-            else
-            {
-                document.getElementById("result").innerHTML = "Уравнение не имеет действительных корней";
-            }
-        }
-    </script>
 </body>
 </html>
